@@ -41,6 +41,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contactListTableView" destination="XMX-At-2zD" id="6Jc-6D-SU4"/>
+                        <segue destination="LF3-xJ-Il2" kind="show" identifier="DisplayContactSegue" id="H4d-uu-MO7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rE4-pw-hDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,6 +55,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xc-EV-RRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1769" y="113"/>
+        </scene>
+        <!--ContactDetailsView-->
+        <scene sceneID="dAo-9g-EUH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactDetailsView" id="LF3-xJ-Il2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jY-vb-rc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="201"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Ea-ca-n6M">

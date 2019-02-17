@@ -27,6 +27,10 @@ class ContactListViewController: UIViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? ContactDetailsViewController,
+            let contact = sender as? Contact else { return }
+        
+        destination.viewModel = ContactDetailsViewModel(contact: contact)
     }
  
 }
@@ -51,7 +55,8 @@ extension ContactListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "DisplayContactSegue", sender: indexPath)
+        let contact = self.viewModel.contact(at: indexPath)
+        performSegue(withIdentifier: "DisplayContactSegue", sender: contact)
     }
     
 }

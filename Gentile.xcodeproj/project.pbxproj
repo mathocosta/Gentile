@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D8AA2C52219F7D800B2A57E /* ContactDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D8AA2C42219F7D800B2A57E /* ContactDetailsView.storyboard */; };
+		5D8AA2C72219F82A00B2A57E /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8AA2C62219F82A00B2A57E /* ContactDetailsViewController.swift */; };
+		5D8AA2C92219F91600B2A57E /* ContactDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8AA2C82219F91600B2A57E /* ContactDetailsViewModel.swift */; };
 		5DB529FF2216E30600859CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB529FE2216E30600859CCB /* AppDelegate.swift */; };
 		5DB52A072216E30600859CCB /* Gentile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A052216E30600859CCB /* Gentile.xcdatamodeld */; };
 		5DB52A092216E30700859CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB52A082216E30700859CCB /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D8AA2C42219F7D800B2A57E /* ContactDetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactDetailsView.storyboard; sourceTree = "<group>"; };
+		5D8AA2C62219F82A00B2A57E /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		5D8AA2C82219F91600B2A57E /* ContactDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewModel.swift; sourceTree = "<group>"; };
 		5DB529FB2216E30600859CCB /* Gentile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gentile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB529FE2216E30600859CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DB52A062216E30600859CCB /* Gentile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gentile.xcdatamodel; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			children = (
 				5DB52A2C2216FB9D00859CCB /* ContactListView.storyboard */,
 				5DB52A352216FE7900859CCB /* ContactFormView.storyboard */,
+				5D8AA2C42219F7D800B2A57E /* ContactDetailsView.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 			children = (
 				5DB52A252216F82300859CCB /* ContactListViewController.swift */,
 				5DB52A372216FED200859CCB /* ContactFormViewController.swift */,
+				5D8AA2C62219F82A00B2A57E /* ContactDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 			children = (
 				5DB52A3A2216FF1800859CCB /* ContactListViewModel.swift */,
 				5DB52A3C2216FF3200859CCB /* ContactFormViewModel.swift */,
+				5D8AA2C82219F91600B2A57E /* ContactDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 				5DB52A0C2216E30700859CCB /* LaunchScreen.storyboard in Resources */,
 				5DB52A2D2216FB9D00859CCB /* ContactListView.storyboard in Resources */,
 				5DB52A092216E30700859CCB /* Assets.xcassets in Resources */,
+				5D8AA2C52219F7D800B2A57E /* ContactDetailsView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +283,9 @@
 			files = (
 				5DB52A242216F71900859CCB /* CoreDataManager.swift in Sources */,
 				5DB52A3D2216FF3200859CCB /* ContactFormViewModel.swift in Sources */,
+				5D8AA2C72219F82A00B2A57E /* ContactDetailsViewController.swift in Sources */,
 				5DB52A312216FCD900859CCB /* ContactListTableViewCell.swift in Sources */,
+				5D8AA2C92219F91600B2A57E /* ContactDetailsViewModel.swift in Sources */,
 				5DB52A272216F82300859CCB /* ContactListViewController.swift in Sources */,
 				5DB52A382216FED200859CCB /* ContactFormViewController.swift in Sources */,
 				5DB52A072216E30600859CCB /* Gentile.xcdatamodeld in Sources */,
