@@ -20,6 +20,10 @@ class CoreDataManager {
         return container
     }()
     
+    static var context: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
+    
     static func fetch<T>(_ request: NSFetchRequest<T>) -> [T] {
         do {
             let list = try persistentContainer.viewContext.fetch(request)
@@ -30,8 +34,16 @@ class CoreDataManager {
         }
     }
     
-    static var context: NSManagedObjectContext {
-        return persistentContainer.viewContext
+    static func createObject(for entity: String, in context: NSManagedObjectContext) -> NSManagedObject? {
+        var result: NSManagedObject?
+        
+        let description = NSEntityDescription.entity(forEntityName: entity, in: context)
+        
+        if let description = description {
+            result = NSManagedObject(entity: description, insertInto: CoreDataManager.context)
+        }
+        
+        return result
     }
     
     static func saveContext() {

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreData
 
 class ContactFormViewModel: NSObject {
     
@@ -42,8 +41,9 @@ class ContactFormViewModel: NSObject {
     }
     
     func saveContact() {
-        let entity = NSEntityDescription.entity(forEntityName: "Contact", in: CoreDataManager.context)!
-        let contact = NSManagedObject(entity: entity, insertInto: CoreDataManager.context)
+        guard let contact = CoreDataManager.createObject(for: "Contact", in: CoreDataManager.context) else {
+            return
+        }
         
         contact.setValue(self.nameText, forKey: "name")
         contact.setValue(self.phoneText, forKey: "phone")
