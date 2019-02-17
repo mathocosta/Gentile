@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		5DB529FF2216E30600859CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB529FE2216E30600859CCB /* AppDelegate.swift */; };
-		5DB52A012216E30600859CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A002216E30600859CCB /* ViewController.swift */; };
-		5DB52A042216E30600859CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB52A022216E30600859CCB /* Main.storyboard */; };
 		5DB52A072216E30600859CCB /* Gentile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A052216E30600859CCB /* Gentile.xcdatamodeld */; };
 		5DB52A092216E30700859CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB52A082216E30700859CCB /* Assets.xcassets */; };
 		5DB52A0C2216E30700859CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB52A0A2216E30700859CCB /* LaunchScreen.storyboard */; };
 		5DB52A172216E30800859CCB /* GentileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A162216E30800859CCB /* GentileTests.swift */; };
+		5DB52A242216F71900859CCB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A232216F71900859CCB /* CoreDataManager.swift */; };
+		5DB52A272216F82300859CCB /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A252216F82300859CCB /* ContactListViewController.swift */; };
+		5DB52A2D2216FB9D00859CCB /* ContactListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB52A2C2216FB9D00859CCB /* ContactListView.storyboard */; };
+		5DB52A312216FCD900859CCB /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A2F2216FCD900859CCB /* ContactListTableViewCell.swift */; };
+		5DB52A322216FCD900859CCB /* ContactListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DB52A302216FCD900859CCB /* ContactListTableViewCell.xib */; };
+		5DB52A362216FE7900859CCB /* ContactFormView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB52A352216FE7900859CCB /* ContactFormView.storyboard */; };
+		5DB52A382216FED200859CCB /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A372216FED200859CCB /* ContactFormViewController.swift */; };
+		5DB52A3B2216FF1800859CCB /* ContactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A3A2216FF1800859CCB /* ContactListViewModel.swift */; };
+		5DB52A3D2216FF3200859CCB /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB52A3C2216FF3200859CCB /* ContactFormViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +36,6 @@
 /* Begin PBXFileReference section */
 		5DB529FB2216E30600859CCB /* Gentile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gentile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB529FE2216E30600859CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5DB52A002216E30600859CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5DB52A032216E30600859CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DB52A062216E30600859CCB /* Gentile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gentile.xcdatamodel; sourceTree = "<group>"; };
 		5DB52A082216E30700859CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DB52A0B2216E30700859CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +43,15 @@
 		5DB52A122216E30800859CCB /* GentileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GentileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB52A162216E30800859CCB /* GentileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GentileTests.swift; sourceTree = "<group>"; };
 		5DB52A182216E30800859CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DB52A232216F71900859CCB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5DB52A252216F82300859CCB /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		5DB52A2C2216FB9D00859CCB /* ContactListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactListView.storyboard; sourceTree = "<group>"; };
+		5DB52A2F2216FCD900859CCB /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		5DB52A302216FCD900859CCB /* ContactListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListTableViewCell.xib; sourceTree = "<group>"; };
+		5DB52A352216FE7900859CCB /* ContactFormView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactFormView.storyboard; sourceTree = "<group>"; };
+		5DB52A372216FED200859CCB /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
+		5DB52A3A2216FF1800859CCB /* ContactListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewModel.swift; sourceTree = "<group>"; };
+		5DB52A3C2216FF3200859CCB /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +93,9 @@
 		5DB529FD2216E30600859CCB /* Gentile */ = {
 			isa = PBXGroup;
 			children = (
+				5DB52A212216F68C00859CCB /* Core */,
+				5DB52A222216F69400859CCB /* ContactList */,
 				5DB529FE2216E30600859CCB /* AppDelegate.swift */,
-				5DB52A002216E30600859CCB /* ViewController.swift */,
-				5DB52A022216E30600859CCB /* Main.storyboard */,
 				5DB52A082216E30700859CCB /* Assets.xcassets */,
 				5DB52A0A2216E30700859CCB /* LaunchScreen.storyboard */,
 				5DB52A0D2216E30700859CCB /* Info.plist */,
@@ -97,6 +111,61 @@
 				5DB52A182216E30800859CCB /* Info.plist */,
 			);
 			path = GentileTests;
+			sourceTree = "<group>";
+		};
+		5DB52A212216F68C00859CCB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5DB52A232216F71900859CCB /* CoreDataManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5DB52A222216F69400859CCB /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				5DB52A392216FEF500859CCB /* ViewModels */,
+				5DB52A2B2216F91800859CCB /* Controllers */,
+				5DB52A2E2216FCBB00859CCB /* Cells */,
+				5DB52A2A2216F84E00859CCB /* Views */,
+			);
+			path = ContactList;
+			sourceTree = "<group>";
+		};
+		5DB52A2A2216F84E00859CCB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DB52A2C2216FB9D00859CCB /* ContactListView.storyboard */,
+				5DB52A352216FE7900859CCB /* ContactFormView.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5DB52A2B2216F91800859CCB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DB52A252216F82300859CCB /* ContactListViewController.swift */,
+				5DB52A372216FED200859CCB /* ContactFormViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5DB52A2E2216FCBB00859CCB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5DB52A2F2216FCD900859CCB /* ContactListTableViewCell.swift */,
+				5DB52A302216FCD900859CCB /* ContactListTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5DB52A392216FEF500859CCB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5DB52A3A2216FF1800859CCB /* ContactListViewModel.swift */,
+				5DB52A3C2216FF3200859CCB /* ContactFormViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +249,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB52A322216FCD900859CCB /* ContactListTableViewCell.xib in Resources */,
+				5DB52A362216FE7900859CCB /* ContactFormView.storyboard in Resources */,
 				5DB52A0C2216E30700859CCB /* LaunchScreen.storyboard in Resources */,
+				5DB52A2D2216FB9D00859CCB /* ContactListView.storyboard in Resources */,
 				5DB52A092216E30700859CCB /* Assets.xcassets in Resources */,
-				5DB52A042216E30600859CCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB52A012216E30600859CCB /* ViewController.swift in Sources */,
+				5DB52A242216F71900859CCB /* CoreDataManager.swift in Sources */,
+				5DB52A3D2216FF3200859CCB /* ContactFormViewModel.swift in Sources */,
+				5DB52A312216FCD900859CCB /* ContactListTableViewCell.swift in Sources */,
+				5DB52A272216F82300859CCB /* ContactListViewController.swift in Sources */,
+				5DB52A382216FED200859CCB /* ContactFormViewController.swift in Sources */,
 				5DB52A072216E30600859CCB /* Gentile.xcdatamodeld in Sources */,
+				5DB52A3B2216FF1800859CCB /* ContactListViewModel.swift in Sources */,
 				5DB529FF2216E30600859CCB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5DB52A022216E30600859CCB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DB52A032216E30600859CCB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5DB52A0A2216E30700859CCB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
