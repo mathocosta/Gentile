@@ -9,9 +9,9 @@
 import UIKit
 
 class ContactListTableViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var contactNameLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -19,5 +19,5 @@ class ContactListTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+
 }

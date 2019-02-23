@@ -14,7 +14,7 @@ protocol Coordinator: AnyObject {
     var childCoordinators: [Coordinator] { get set }
     /// The base navigation controller of this coordinator.
     var navigationController: UINavigationController { get set }
-    
+
     /// Must be called when coordinator is to start working.
     func start()
 }

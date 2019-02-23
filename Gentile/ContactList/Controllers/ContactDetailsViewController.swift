@@ -9,17 +9,17 @@
 import UIKit
 
 class ContactDetailsViewController: UIViewController, Storyboarded {
-    
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var birthDateLabel: UILabel!
-    
+
     var viewModel: ContactDetailsViewModel!
     weak var coordinator: ContactListCoordinator?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.nameLabel.text = self.viewModel.nameText
         self.phoneLabel.text = self.viewModel.phoneText
         self.birthDateLabel.text = self.viewModel.birthDate

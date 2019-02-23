@@ -40,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07C1A79822DF768FF1DDC681 /* Pods-Gentile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gentile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gentile/Pods-Gentile.debug.xcconfig"; sourceTree = "<group>"; };
+		378B077EB23B501D0C796052 /* Pods-Gentile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gentile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gentile/Pods-Gentile.release.xcconfig"; sourceTree = "<group>"; };
 		5D3D354D22203A42005B6710 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5D3D354F22203AF8005B6710 /* ContactListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCoordinator.swift; sourceTree = "<group>"; };
 		5D3D355122203C33005B6710 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -99,6 +101,8 @@
 				5DB529FD2216E30600859CCB /* Gentile */,
 				5DB52A152216E30800859CCB /* GentileTests */,
 				5DB529FC2216E30600859CCB /* Products */,
+				BAEB76CD0A3D7DAC8730E5B5 /* Pods */,
+				BDE69D94AF8A99E6CE18BC4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +198,22 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		BAEB76CD0A3D7DAC8730E5B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07C1A79822DF768FF1DDC681 /* Pods-Gentile.debug.xcconfig */,
+				378B077EB23B501D0C796052 /* Pods-Gentile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BDE69D94AF8A99E6CE18BC4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DB52A1B2216E30800859CCB /* Build configuration list for PBXNativeTarget "Gentile" */;
 			buildPhases = (
+				C64BAACE30959D2B7B199894 /* [CP] Check Pods Manifest.lock */,
 				5DB529F72216E30600859CCB /* Sources */,
 				5DB529F82216E30600859CCB /* Frameworks */,
 				5DB529F92216E30600859CCB /* Resources */,
+				5D3D35712221BF81005B6710 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -292,6 +314,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D3D35712221BF81005B6710 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		C64BAACE30959D2B7B199894 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gentile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DB529F72216E30600859CCB /* Sources */ = {
@@ -462,6 +526,7 @@
 		};
 		5DB52A1C2216E30800859CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07C1A79822DF768FF1DDC681 /* Pods-Gentile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +545,7 @@
 		};
 		5DB52A1D2216E30800859CCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378B077EB23B501D0C796052 /* Pods-Gentile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
