@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ContactFormViewController: UIViewController {
+class ContactFormViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var birthDateField: UITextField!
     
     var viewModel: ContactFormViewModel!
+    weak var coordinator: ContactListCoordinator?
     
     // BirthDate DatePicker configuration
     lazy var dateFieldPicker: UIDatePicker = {
@@ -50,7 +51,7 @@ class ContactFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.viewModel = ContactFormViewModel()
+        self.phoneField.keyboardType = .phonePad
         
         self.birthDateField.text = self.viewModel.birthDateAsString
         self.birthDateField.inputView = self.dateFieldPicker

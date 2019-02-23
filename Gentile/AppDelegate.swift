@@ -7,22 +7,27 @@
 //
 
 import UIKit
-import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    var coordinator: ContactListCoordinator?
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let navController = UINavigationController()
+        self.coordinator = ContactListCoordinator(navigationController: navController)
+        self.coordinator?.start()
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
         CoreDataManager.saveContext()
     }
 

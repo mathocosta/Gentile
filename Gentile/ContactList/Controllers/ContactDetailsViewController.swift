@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ContactDetailsViewController: UIViewController {
+class ContactDetailsViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var birthDateLabel: UILabel!
     
     var viewModel: ContactDetailsViewModel!
+    weak var coordinator: ContactListCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()

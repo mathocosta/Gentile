@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eRr-rC-2Ww">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Contact List View Controller-->
         <scene sceneID="ZCK-pY-c56">
             <objects>
-                <viewController storyboardIdentifier="ContactListVC" id="Swv-Yh-Vbg" customClass="ContactListViewController" customModule="Gentile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactListViewController" id="Swv-Yh-Vbg" customClass="ContactListViewController" customModule="Gentile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="izH-Yd-EOX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,34 +35,17 @@
                     <navigationItem key="navigationItem" id="jUn-wg-tVH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HFL-pT-gSU">
                             <connections>
-                                <segue destination="0N5-47-GhJ" kind="presentation" id="bYf-4z-1xf"/>
+                                <action selector="addContactButtonPressed:" destination="Swv-Yh-Vbg" id="daE-Ry-QQG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contactListTableView" destination="XMX-At-2zD" id="6Jc-6D-SU4"/>
-                        <segue destination="LF3-xJ-Il2" kind="show" identifier="DisplayContactSegue" id="H4d-uu-MO7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rE4-pw-hDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="837.60000000000002" y="113.79310344827587"/>
-        </scene>
-        <!--ContactFormView-->
-        <scene sceneID="khZ-GE-W8f">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ContactFormView" id="0N5-47-GhJ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Xc-EV-RRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1769" y="113"/>
-        </scene>
-        <!--ContactDetailsView-->
-        <scene sceneID="dAo-9g-EUH">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ContactDetailsView" id="LF3-xJ-Il2" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3jY-vb-rc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1774" y="201"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Ea-ca-n6M">

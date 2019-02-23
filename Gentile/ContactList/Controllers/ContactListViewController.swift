@@ -8,16 +8,15 @@
 
 import UIKit
 
-class ContactListViewController: UIViewController {
+class ContactListViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var contactListTableView: UITableView!
     
     var viewModel: ContactListViewModel!
+    weak var coordinator: ContactListCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.viewModel = ContactListViewModel()
         
         self.contactListTableView.delegate = self
         self.contactListTableView.dataSource = self
@@ -33,6 +32,10 @@ class ContactListViewController: UIViewController {
         destination.viewModel = ContactDetailsViewModel(contact: contact)
     }
  
+    @IBAction func addContactButtonPressed(_ sender: UIBarButtonItem) {
+        self.coordinator?.createContact()
+    }
+    
 }
 
 
@@ -56,7 +59,7 @@ extension ContactListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let contact = self.viewModel.contact(at: indexPath)
-        performSegue(withIdentifier: "DisplayContactSegue", sender: contact)
+        self.coordinator?.showDetails(of: contact)
     }
     
 }
